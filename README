@@ -1,0 +1,39 @@
+ROAM-GPS-READER
+
+roam-gps-reader is a GPS visualizer application originally made for the !Still project (http://roam1.wikidot.com/).
+It reads GPS coordinates from the roam-gps-feeder webservice and animate them on screen with OpenGL through PyGame.
+
+[> INSTALL
+Before using it you must install the following python modules:
+* PyGame (www.pygame.org)
+* PyOpenGL (pyopengl.sourceforge.net)
+
+Make sure you are using python 2.6.4 and then copy the config.ini.sample into config.ini and configure it to match
+the web service address where lies your roam-gps-feeder webservice.
+
+Finally, you can launch the script simply with the following command :
+	python roam-gps-reader.py
+
+[> CONFIG
+[GPS WebService]
+server:http://www.example.com ;The root url of your roam-gps-feeder install
+path:/geoloc/query.php        ;The path after server domain
+
+
+[> OPTIONS
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -s FROMDATE, --start=FROMDATE
+                        Start receiving (or restore older) GPS location from
+                        specific date
+  -f FILE, --file=FILE  Import GPS locations from file
+
+[> TODO
+* Split code into modules (gps reader process, graphical user interface...)
+* Add some theming capabilities :)
+* Clean the OpenGL code to match OpenGL 3.x specs
+
+[> Author
+Kevin 'kiniou' Roy
+kiniou_AT_gmail_DOT_com
+http://blog.knokorpo.fr

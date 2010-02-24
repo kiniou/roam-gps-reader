@@ -1,0 +1,3 @@
+[GPS WebService]
+server:http://www.example.com ;The root url of your roam-gps-feeder install
+path:/geoloc/query.php        ;The path after server domain
